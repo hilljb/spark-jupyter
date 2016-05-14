@@ -18,9 +18,13 @@ I now have the directory `/opt/jdk1.8.0_91`, which will become my JAVA_HOME dire
 
 ### Spark
 
-On the [Apache Spark download page](http://spark.apache.org/downloads.html), I've downloaded Spark 1.6.0 in the "pre-build for Hadoop 2.6 and later" version, and I now have `spark-1.6.0-bin-hadoop2.6.tgz` also sitting inside my `/opt` directory. (I am using version 1.6.0 instead of the recently available 1.6.1 as I've had some memory management issues with the newer version.) I've extracted and chowned this as follows.
+On the [Apache Spark download page](http://spark.apache.org/downloads.html), I've downloaded Spark 1.6.0 in the "pre-build for Hadoop 2.6 and later" version (289MB), and I now have `spark-1.6.0-bin-hadoop2.6.tgz` also sitting inside my `/opt` directory. (I am using version 1.6.0 instead of the recently available 1.6.1 as I've had some memory management issues with the newer version.) I've extracted and chowned this as follows.
 
 ```
 $ sudo tar zxvf spark-1.6.0-bin-hadoop2.6.tgz
 $ sudo chown -R jason:jason spark-1.6.0-bin-hadoop2.6
 ```
+
+### Anaconda
+
+On the [Continuum Analytics Anaconda download page](https://www.continuum.io/downloads), download and install the version of Anaconda appropriate for your machine. (This installation typically involves running a Bash script. See Continuum's instructions.)
