@@ -14,7 +14,8 @@ export SPARK_HOME="/opt/spark-1.6.0-bin-hadoop2.6"
 
 # PySpark/Jupyter Settings
 export PYSPARK_DRIVER_PYTHON="ipython"
-export PYSPARK_DRIVER_PYTHON_OPTS="'notebook'"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
-$SPARK_HOME/bin/pyspark
-
+$SPARK_HOME/bin/pyspark \
+  --driver-memory 40g \
+  --packages com.databricks:spark-avro_2.10:2.0.1
