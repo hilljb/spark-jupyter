@@ -34,11 +34,18 @@ On the [Continuum Analytics Anaconda download page](https://www.continuum.io/dow
 
 At this point, you should have `conda` callable at the command prompt (from the Anaconda installation), and you should have both Java and Spark installed in directories that we'll call JAVA_HOME and SPARK_HOME, respectively.
 
-Now, you should either clone this repository (`git clone https://github.com/hilljb/spark-jupyter.git`), or copy the files manually as needed for use on your local machine.
-
 #### Install the Conda Environment
 
-#### Set Configuration Options
+I have a conda environment created with the required dependencies. Setting that up looks something like the following.
 
-The `spark-jupyter.conf` file in the `bin` directory of 
+```
+$ conda create -n spark-jupyter python
+...
+$ source activate spark-jupyter
+...
+$ pip install matplotlib, pandas, seaborn, simplejson, requests, requests_oauthlib
+```
 
+## Run
+
+See the script in the `bin` directory of this repo and set your variables and options as needed. One thing to keep in mind is that Jupyter has many settings of its own (which port to run on, whether or not to open a browser, directory locations, etc.) and you may want to set those in your `~.jupyter` config.
